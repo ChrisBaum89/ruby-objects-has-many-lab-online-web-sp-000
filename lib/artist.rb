@@ -1,9 +1,8 @@
 class Artist
-  attr_accessor :name, :songs, :song_count
+  attr_accessor :name, :song_count
 
   def initialize(name)
     @name = name
-    @songs = []
   end
 
   def add_song(song) #takes in the argument of a song name, creates a new song with it and associates the song and artist
@@ -20,6 +19,7 @@ class Artist
   end
 
   def self.song_count
+    #binding.pry
     Song.all.count
   end
 
